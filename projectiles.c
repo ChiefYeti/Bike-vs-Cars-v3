@@ -68,7 +68,7 @@ void drawProjectiles() {
             glPushMatrix();
             glTranslatef(projectiles[i].x, projectiles[i].y, 0.0f);
             glColor3f(1.0f, 0.0f, 0.0f); // Couleur rouge
-            glutSolidSphere(0.05f, 20, 20); // Dessine un projectile sphérique
+            glutSolidSphere(0.02f, 20, 20); // Dessine un projectile sphérique
             glPopMatrix();
         }
     }

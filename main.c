@@ -14,12 +14,24 @@
 #include "projectiles.h"
 #include "cars.h"
 #include "globalVariables.h"
+#include "collisions.h"
 /*
 #include "collisions.h"
  */
 
 // Fonction pour mettre à jour le jeu
 void updateGame(int value) {
+    for (int i = 0; i < MAX_PROJECTILES; i++) {
+            if (projectiles[i].active) {
+                for (int j = 0; j < MAX_CARS; j++) {
+                    if (cars[j].active && checkCollision(projectiles[i].x, projectiles[i].y, cars[j])) {
+                        cars[j].active = false; // Désactiver la voiture
+                        projectiles[i].active = false; // Désactiver le projectile
+                        break; // Sortir de la boucle car la collision a été traitée
+                    }
+                }
+            }
+        }
     // Mettre à jour les projectiles
     updateProjectiles();
     // Mettre à jour les voitures

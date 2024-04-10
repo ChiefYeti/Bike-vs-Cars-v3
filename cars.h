@@ -14,7 +14,7 @@
 // Structure pour une voiture
 typedef struct {
     float x, y; // Position de la voiture
-    bool active; // État de la voiture
+    bool active; // État de la voiture (booléen indiquant si la voiture est active ou pas)
 } Car;
 
 void initCars();

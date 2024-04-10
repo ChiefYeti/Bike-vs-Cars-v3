@@ -13,9 +13,12 @@
 
 extern float bikePosX;
 extern float bikePosY;
+extern const float cars_width;
+extern const float left_border;
+extern const float right_border;
 
 #define MAX_PROJECTILES 50
-#define MAX_CARS 5
+#define MAX_CARS 10
 
 extern Projectile projectiles[MAX_PROJECTILES];
 extern Car cars[MAX_CARS];
